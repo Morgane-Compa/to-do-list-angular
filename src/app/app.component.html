@@ -1,8 +1,10 @@
 <h1>Ma to do list</h1>
 <ul>
-  <li [class.redText]="item.isUrgent" *ngFor = "let item of todoList">{{item.title}}
+  <li [class.redText]="item.isUrgent" *ngFor = "let item of todoList"><app-todo [parentToChild]="item"></app-todo>
     <button *ngIf="item.content">Voir plus</button>
   </li>
 </ul>
+
+
 
 
